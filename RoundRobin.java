@@ -2,15 +2,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class RoundRobin {
 
-    Queue <Process> processQueue = new LinkedList<Process>();
+    Queue<Process> processQueue = new LinkedList<Process>();
     ArrayList<Process> waitList = new ArrayList<Process>();
-    HashMap<String,Integer> ganttChart;
+    ArrayList<HashMap<String,Integer>> ganttChart = new ArrayList<HashMap<String,Integer>>();
+
+    //getter and setter
+    Queue<Process> getProcessQueue(){return processQueue;};
+    ArrayList<Process> getWaitList(){return waitList;}
+    
+
     
     public void userInput(){
          
@@ -77,8 +83,9 @@ public class RoundRobin {
             }
             time =0; ;
         }
-
     }
+
+    public void initializeHashMap(){}
 
     
 }
